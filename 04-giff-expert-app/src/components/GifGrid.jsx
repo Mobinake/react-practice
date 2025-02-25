@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import { GifItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
+import PropTypes from 'prop-types';
 
 export const GifGrid = ({ category }) => {
 	const { images, isLoading } = useFetchGifs(category);
@@ -11,7 +12,7 @@ export const GifGrid = ({ category }) => {
 	return (
 		<>
 			<h4>{category}</h4>
-			{isLoading && <h3>Cargando......</h3>}
+			{isLoading && <h3>Cargando...</h3>}
 
 			<div className='card-grid'>
 				{images.map((image) => (
@@ -23,4 +24,8 @@ export const GifGrid = ({ category }) => {
 			</div>
 		</>
 	);
+};
+
+GifGrid.propTypes = {
+	category: PropTypes.string.isRequired,
 };
