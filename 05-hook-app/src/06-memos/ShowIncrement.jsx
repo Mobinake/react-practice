@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const ShowIncrement = ({ increment }) => {
+export const ShowIncrement = (increment) => {
 	console.log('Me volví a generar :(');
 
 	return (

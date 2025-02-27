@@ -1,4 +1,3 @@
-import React from 'react';
 import { useCounter, useFetch } from '../hooks';
 import { LoadingMessage, PokemonCard } from '../03-examples';
 

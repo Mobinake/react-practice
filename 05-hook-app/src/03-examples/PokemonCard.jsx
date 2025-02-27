@@ -1,4 +1,5 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useLayoutEffect, useRef, useState } from 'react';
 
 export const PokemonCard = ({ id, name, sprites = [] }) => {
 	const h2Ref = useRef();

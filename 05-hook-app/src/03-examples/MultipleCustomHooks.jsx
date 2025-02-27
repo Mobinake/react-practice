@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useCounter, useFetch } from '../hooks';
 import { LoadingMessage } from './LoadingMessage';
 import { PokemonCard } from './PokemonCard';

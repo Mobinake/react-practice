@@ -3,12 +3,11 @@
 import { useForm } from '../hooks/useForm';
 
 export const FormWCustom = () => {
-	const { formState, onInputChange, onResetForm, username, email, password } =
-		useForm({
-			username: '',
-			email: '',
-			password: '',
-		});
+	const { onInputChange, onResetForm, username, email, password } = useForm({
+		username: '',
+		email: '',
+		password: '',
+	});
 
 	// const { username, email, password } = formState;
 	return (
