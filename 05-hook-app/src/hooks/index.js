@@ -1,3 +1,4 @@
-export * from './useCounter.js';
-export * from './useFetch.js';
-export * from './useForm.js';
+export * from './useCounter';
+export * from './useFetch';
+export * from './useForm';
+export * from './useTodos';
