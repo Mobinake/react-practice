@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { GifGrid } from '../../components/GifGrid';
 import { render, screen } from '@testing-library/react';
 import { useFetchGifs } from '../../hooks/useFetchGifs';

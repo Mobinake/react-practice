@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { AddCategory } from '../../components/AddCategory';
 import { fireEvent, render, screen } from '@testing-library/react';
 
