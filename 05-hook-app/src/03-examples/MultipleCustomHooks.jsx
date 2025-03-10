@@ -1,4 +1,3 @@
-
 import { useCounter, useFetch } from '../hooks';
 import { LoadingMessage } from './LoadingMessage';
 import { PokemonCard } from './PokemonCard';
@@ -19,12 +18,12 @@ export const MultipleCustomHooks = () => {
 				<PokemonCard
 					id={counter}
 					name={data.name}
-					sprites={[
-						data.sprites.front_default,
-						data.sprites.back_default,
-						data.sprites.front_shiny,
-						data.sprites.back_shiny,
-					]}
+					// sprites={[
+					// 	// data.sprites.front_default,
+					// 	// data.sprites.back_default,
+					// 	data.sprites.front_shiny,
+					// 	data.sprites.back_shiny,
+					// ]}
 				/>
 			)}
 
@@ -35,6 +34,7 @@ export const MultipleCustomHooks = () => {
 			</button>
 			<button
 				className='btn btn-primary mt-3'
+				disabled={isLoading}
 				onClick={() => increment(1)}>
 				Siguiente
 			</button>
