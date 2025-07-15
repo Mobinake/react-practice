@@ -8,12 +8,13 @@ export const GifItem = ({ title, id, url }) => {
 				src={url}
 				alt={title}
 			/>
-			<li key={id}>{title}</li>;
+			<p key={id}>{title}</p>
 		</div>
 	);
 };
 
-GifItem.PropTypes = {
+GifItem.propTypes = {
 	title: PropTypes.string.isRequired,
 	url: PropTypes.string.isRequired,
 };
+// mejorado con cline

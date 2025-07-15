@@ -13,7 +13,7 @@ describe('Test de AddCategory', () => {
 
 	test('debe de llamar onNewCategory si el input tiene un valor', () => {
 		const inputValue = 'Sadmen';
-		//con jest.fn simulamos una función
+		//const jest.fn simulamos una función
 		const onNewCategory = jest.fn();
 		render(<AddCategory onNewCategory={onNewCategory} />);
 
