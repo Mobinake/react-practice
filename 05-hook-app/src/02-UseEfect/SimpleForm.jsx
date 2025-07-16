@@ -32,18 +32,18 @@ export const SimpleForm = () => {
 			<h1>Formulario</h1>
 			<hr />
 			<input
-				type='text'
-				className='form-control'
-				placeholder='Username'
-				name='username'
+				type="text"
+				className="form-control"
+				placeholder="Username"
+				name="username"
 				value={username}
 				onChange={onInputChange}
 			/>
 			<input
-				type='email'
-				className='form-control mt-4'
-				placeholder='ejemplo@gmail.com'
-				name='email'
+				type="email"
+				className="form-control mt-4"
+				placeholder="ejemplo@gmail.com"
+				name="email"
 				value={email}
 				onChange={onInputChange}
 			/>

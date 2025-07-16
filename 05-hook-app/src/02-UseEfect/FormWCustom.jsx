@@ -15,32 +15,33 @@ export const FormWCustom = () => {
 			<h1>Formulario con Custom Hook</h1>
 			<hr />
 			<input
-				type='text'
-				className='form-control'
-				placeholder='Username'
-				name='username'
+				type="text"
+				className="form-control"
+				placeholder="Username"
+				name="username"
 				value={username}
 				onChange={onInputChange}
 			/>
 			<input
-				type='email'
-				className='form-control mt-4'
-				placeholder='ejemplo@gmail.com'
-				name='email'
+				type="email"
+				className="form-control mt-4"
+				placeholder="ejemplo@gmail.com"
+				name="email"
 				value={email}
 				onChange={onInputChange}
 			/>
 			<input
-				type='pass'
-				className='form-control mt-4'
-				placeholder='password'
-				name='password'
+				type="pass"
+				className="form-control mt-4"
+				placeholder="password"
+				name="password"
 				value={password}
 				onChange={onInputChange}
 			/>
 			<button
 				onClick={onResetForm}
-				className='btn btn-primary mt-4'>
+				className="btn btn-primary mt-4"
+			>
 				Borrar
 			</button>
 		</>

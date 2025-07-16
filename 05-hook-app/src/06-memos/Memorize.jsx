@@ -13,13 +13,15 @@ export const Memorize = () => {
 			</h1>
 			<hr />
 			<button
-				className='btn btn-primary'
-				onClick={() => increment(1)}>
+				className="btn btn-primary"
+				onClick={() => increment(1)}
+			>
 				+1
 			</button>
 			<button
-				className='btn btn-outline-primary'
-				onClick={() => setShow(!show)}>
+				className="btn btn-outline-primary"
+				onClick={() => setShow(!show)}
+			>
 				show/hide {JSON.stringify(show)}
 			</button>
 		</>

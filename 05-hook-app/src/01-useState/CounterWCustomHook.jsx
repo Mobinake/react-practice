@@ -9,17 +9,20 @@ export const CounterWCustomHook = () => {
 			<hr />
 			<button
 				onClick={() => increment(1)}
-				className='btn btn-primary'>
+				className="btn btn-primary"
+			>
 				+1
 			</button>
 			<button
 				onClick={() => decrement(1)}
-				className='btn btn-primary'>
+				className="btn btn-primary"
+			>
 				-1
 			</button>
 			<button
 				onClick={reset}
-				className='btn btn-primary'>
+				className="btn btn-primary"
+			>
 				Reset
 			</button>
 		</>

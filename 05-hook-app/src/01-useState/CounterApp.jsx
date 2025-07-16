@@ -6,11 +6,12 @@ export const CounterApp = () => {
 		counter2: 20,
 		counter3: 30,
 	});
-
+	//desestructurar el useState del counter
 	const { counter1, counter2, counter3 } = counters;
 
 	const incrementarCounter1 = () => {
 		setCounter({
+			//utulizamod la funcion de spread para mantener los otros valores(counter2 y counter3)
 			...counters,
 			counter1: counter1 + 1,
 			counter2,
@@ -38,18 +39,21 @@ export const CounterApp = () => {
 			<h1>Counter: {counter3}</h1>
 			<hr />
 			<button
-				className='btn'
-				onClick={() => incrementarCounter1()}>
+				className="btn"
+				onClick={() => incrementarCounter1()}
+			>
 				+1
 			</button>
 			<button
-				className='btn'
-				onClick={() => incrementarCounter2()}>
+				className="btn"
+				onClick={() => incrementarCounter2()}
+			>
 				+1
 			</button>
 			<button
-				className='btn'
-				onClick={() => incrementarCounter3()}>
+				className="btn"
+				onClick={() => incrementarCounter3()}
+			>
 				+1
 			</button>
 		</>

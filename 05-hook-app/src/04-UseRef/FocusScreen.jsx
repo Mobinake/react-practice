@@ -13,13 +13,14 @@ export const FocusScreen = () => {
 			<hr />
 			<input
 				ref={inputRef}
-				type='text'
-				placeholder='Ingrese su nombre'
-				className='form-control'
+				type="text"
+				placeholder="Ingrese su nombre"
+				className="form-control"
 			/>
 			<button
-				className='btn brn-primary mt-2'
-				onClick={onClick}>
+				className="btn brn-primary mt-2"
+				onClick={onClick}
+			>
 				Focus a algo
 			</button>
 		</>

@@ -26,7 +26,7 @@ describe('Pruebas en TodoApp', () => {
 		handleNewTodo: jest.fn(),
 	});
 
-	useTodos.test('debe de mostrar el componente correctamente', () => {
+	test('debe de mostrar el componente correctamente', () => {
 		render(<TodoApp />);
 		// screen.debug();
 		expect(screen.getByText('todo1')).toBeTruthy;
