@@ -1,18 +1,14 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import { UserContext } from './UserContext';
-
-// const user = {
-// 	id: 1234,
-// 	name: 'master',
-// 	email: 'fernando@gmail.com',
-// };
 
 export const UserProvider = ({ children }) => {
 	const [user, setUser] = useState();
 
 	return (
 		<>
-			{/* <UserContext.Provider value={{ hola: 'mundo', user: user }}> */}
+			{/* provee la informacion que requiere del usuario. usualmente se 
+				devuelve un objeto con todos los datos relacionados al usuario */}
 			<UserContext.Provider value={{ user, setUser }}>
 				{children}
 			</UserContext.Provider>

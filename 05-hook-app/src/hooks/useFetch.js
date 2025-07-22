@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 
 const localCache = {};
@@ -13,6 +14,7 @@ export const useFetch = (url) => {
 	useEffect(() => {
 		getFetch();
 	}, [url]);
+
 	const setLoadingState = () =>
 		setState({
 			data: null,
@@ -35,7 +37,7 @@ export const useFetch = (url) => {
 		setLoadingState();
 		const resp = await fetch(url);
 
-		await new Promise((resolve) => setTimeout(resolve, 2));
+		await new Promise((resolve) => setTimeout(resolve, 200));
 		if (!resp.ok) {
 			setState({
 				data: null,

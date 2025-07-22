@@ -2,7 +2,7 @@ import { useEffect, useReducer } from 'react';
 import { todoReducer } from '../08-useReducer/todoReducer';
 
 const init = () => {
-	return JSON.parse(localStorage.getItem('todos') || []);
+	return JSON.parse(localStorage.getItem('todos')) || [];
 };
 
 export const useTodos = () => {
@@ -21,7 +21,6 @@ export const useTodos = () => {
 	};
 
 	const handleDeleteTodo = (id) => {
-		// console.log({ id });
 		dispatch({
 			type: '[TODO] Remove Todo',
 			payload: id,
@@ -29,7 +28,6 @@ export const useTodos = () => {
 	};
 
 	const handleToggleTodo = (id) => {
-		// console.log({ id });
 		dispatch({
 			type: '[TODO] Toggle Todo',
 			payload: id,

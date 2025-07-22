@@ -1,15 +1,16 @@
 const initialState = [
 	{
 		id: 1,
-		todo: 'Vencer al Sol',
+		todo: 'Recolectar la piedra del Alma',
 		done: false,
 	},
 ];
 
 const todoReducer = (state = initialState, action = {}) => {
-	if (action.type === 'TODO ADD') {
+	if (action.type === '[TODO] add todo') {
 		return [...state, action.payload];
 	}
+
 	return state;
 };
 
@@ -17,12 +18,12 @@ let todos = todoReducer();
 
 const newTodo = {
 	id: 2,
-	todo: 'Vencer a la luna',
+	todo: 'Recolectar la priedra del poder',
 	done: false,
 };
 
 const addTodoAction = {
-	type: 'TODO ADD',
+	type: '[TODO] add todo',
 	payload: newTodo,
 };
 

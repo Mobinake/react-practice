@@ -6,10 +6,12 @@ export const SimpleForm = () => {
 		username: 'Jugador',
 		email: 'jugador@gmail.com',
 	});
+
 	const { username, email } = formState;
 
 	const onInputChange = ({ target }) => {
 		const { name, value } = target;
+
 		setFormState({
 			...formState,
 			[name]: value,
@@ -19,10 +21,13 @@ export const SimpleForm = () => {
 	// se encarga de controlar si cambio el estado, para ejecutar la accion
 	useEffect(() => {
 		// console.log('useEffect1');
+		// [] solo al renderizarlo, dependencias para que se vuelva a disparar
 	}, []);
+
 	useEffect(() => {
 		// console.log('formState cambió');
 	}, [formState]);
+
 	useEffect(() => {
 		// console.log('email changes');
 	}, [email]);
@@ -39,6 +44,7 @@ export const SimpleForm = () => {
 				value={username}
 				onChange={onInputChange}
 			/>
+
 			<input
 				type="email"
 				className="form-control mt-4"
@@ -47,6 +53,7 @@ export const SimpleForm = () => {
 				value={email}
 				onChange={onInputChange}
 			/>
+
 			{username === 'Jugador' && <Message />}
 		</>
 	);
