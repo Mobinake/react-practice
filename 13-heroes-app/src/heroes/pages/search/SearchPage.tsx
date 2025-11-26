@@ -1,4 +1,5 @@
 import { Jumbotron } from '@/components/custom/Jumbotron';
+import { HeroStats } from '@/heroes/components/HeroStats';
 
 export const SearchPage = () => {
 	return (
@@ -7,6 +8,7 @@ export const SearchPage = () => {
 				title="Buscando Heroes"
 				description="Descubre a los heroes."
 			/>
+			<HeroStats />
 		</>
 	);
 };
