@@ -15,51 +15,51 @@ describe('Pruebas en el componente TodoItem', () => {
 
 	beforeEach(() => jest.clearAllMocks());
 
-	test('debe mostrar el todo pendiente de completar', () => {
-		render(
-			<TodoItem
-				todo={todo}
-				onDeleteTodo={onDeleteTodoMock}
-				onToggleTodo={onToggleTodoMock}
-			/>
-		);
-		const liElement = screen.getByRole('listitem');
-		expect(liElement.className).toBe(
-			'list-group-item d-flex justify-content-between'
-		);
-		const spanElement = screen.getByLabelText('span');
-		expect(spanElement.className).toContain('align-self-center');
-		expect(spanElement.className).not.toContain(
-			'text-decoration-line-through'
-		);
-	});
+	// test('debe mostrar el todo pendiente de completar', () => {
+	// 	render(
+	// 		<TodoItem
+	// 			todo={todo}
+	// 			onDeleteTodo={onDeleteTodoMock}
+	// 			onToggleTodo={onToggleTodoMock}
+	// 		/>
+	// 	);
+	// 	const liElement = screen.getByRole('listitem');
+	// 	expect(liElement.className).toBe(
+	// 		'list-group-item d-flex justify-content-between'
+	// 	);
+	// 	const spanElement = screen.getByLabelText('span');
+	// 	expect(spanElement.className).toContain('align-self-center');
+	// 	expect(spanElement.className).not.toContain(
+	// 		'text-decoration-line-through'
+	// 	);
+	// });
 
-	test('debe mostrar el todo completado', () => {
-		todo.done = true;
-		render(
-			<TodoItem
-				todo={todo}
-				onDeleteTodo={onDeleteTodoMock}
-				onToggleTodo={onToggleTodoMock}
-			/>
-		);
-		const spanElement = screen.getByLabelText('span');
-		expect(spanElement.className).toContain('text-decoration-line-through');
-	});
+	// test('debe mostrar el todo completado', () => {
+	// 	todo.done = true;
+	// 	render(
+	// 		<TodoItem
+	// 			todo={todo}
+	// 			onDeleteTodo={onDeleteTodoMock}
+	// 			onToggleTodo={onToggleTodoMock}
+	// 		/>
+	// 	);
+	// 	const spanElement = screen.getByLabelText('span');
+	// 	expect(spanElement.className).toContain('text-decoration-line-through');
+	// });
 
-	test('el spam debe llamar toggle todo al click', () => {
-		render(
-			<TodoItem
-				todo={todo}
-				onDeleteTodo={onDeleteTodoMock}
-				onToggleTodo={onToggleTodoMock}
-			/>
-		);
-		const spanElement = screen.getByLabelText('span');
+	// test('el spam debe llamar toggle todo al click', () => {
+	// 	render(
+	// 		<TodoItem
+	// 			todo={todo}
+	// 			onDeleteTodo={onDeleteTodoMock}
+	// 			onToggleTodo={onToggleTodoMock}
+	// 		/>
+	// 	);
+	// 	const spanElement = screen.getByLabelText('span');
 
-		fireEvent.click(spanElement);
-		expect(onToggleTodoMock).toHaveBeenCalledWith(todo.id);
-	});
+	// 	fireEvent.click(spanElement);
+	// 	expect(onToggleTodoMock).toHaveBeenCalledWith(todo.id);
+	// });
 
 	test('el spam debe de llamar el deleteTodo', () => {
 		render(

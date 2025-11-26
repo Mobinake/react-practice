@@ -15,6 +15,7 @@ describe('Prueba en TodoReducer', () => {
 		const newState = todoReducer(initialState, {});
 		expect(newState).toBe(initialState);
 	});
+
 	test('debe agregar un TODO', () => {
 		const action = {
 			type: '[TODO] Add Todo',
@@ -45,6 +46,7 @@ describe('Prueba en TodoReducer', () => {
 		};
 		const newState = todoReducer(initialState, action);
 		expect(newState[0].done).toBe(true);
+
 		const newState2 = todoReducer(newState, action);
 		expect(newState2[0].done).toBe(false);
 	});

@@ -10,6 +10,7 @@ jest.mock('../../src/hooks/useCounter');
 
 describe('Pruebas el MultipleCustomHooks', () => {
 	const mockIncrement = jest.fn();
+
 	useCounter.mockReturnValue({
 		counter: 1,
 		increment: mockIncrement,
@@ -22,11 +23,12 @@ describe('Pruebas el MultipleCustomHooks', () => {
 	test('mostrar el componente por defecto', () => {
 		useFetch.mockReturnValue({
 			data: null,
-			hasError: null,
 			isLoading: true,
+			hasError: null,
 		});
 
 		render(<MultipleCustomHooks />);
+
 		expect(screen.getByText('Cargando'));
 		expect(screen.getByText('Informaciones del Pokemon:'));
 
@@ -38,14 +40,14 @@ describe('Pruebas el MultipleCustomHooks', () => {
 	test('debe de mostrar un quote', () => {
 		useFetch.mockReturnValue({
 			data: [{ author: 'Fernando', quote: 'Hola mundo' }],
-			hasError: null,
 			isLoading: false,
+			hasError: null,
 		});
 
 		render(<MultipleCustomHooks />);
 		// screen.debug();
-		expect(screen.getByText('Anterior').toBeTruthy);
 		expect(screen.getByText('Siguiente').toBeTruthy);
+		expect(screen.getByText('Anterior').toBeTruthy);
 
 		const nextButton = screen.getByRole('button', { name: 'Siguiente' });
 		expect(nextButton.disabled).toBeFalsy();
@@ -54,8 +56,8 @@ describe('Pruebas el MultipleCustomHooks', () => {
 	test('debe llamar la funcion de incrementar', () => {
 		useFetch.mockReturnValue({
 			data: [{ author: 'Fernando', quote: 'Hola mundo' }],
-			hasError: null,
 			isLoading: false,
+			hasError: null,
 		});
 
 		render(<MultipleCustomHooks />);

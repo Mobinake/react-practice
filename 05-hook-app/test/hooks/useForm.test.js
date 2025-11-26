@@ -6,18 +6,20 @@ import { act } from 'react';
 describe('Pruebas en UseForm', () => {
 	const initialForm = {
 		name: 'Fernando',
-		email: 'fernandoemail.com',
+		email: 'juan@gmail.com',
 	};
+
 	test('debe regresar la informacion por defecto', () => {
 		const { result } = renderHook(() => useForm(initialForm));
 		expect(result.current).toEqual({
 			name: 'Fernando',
-			email: 'fernandoemail.com',
+			email: 'gmail.com',
 			formState: initialForm,
 			onInputChange: expect.any(Function),
 			onResetForm: expect.any(Function),
 		});
 	});
+
 	test('debe de cambiar el nombre del formulario', () => {
 		const newValue = 'Jose';
 		//montar hook
